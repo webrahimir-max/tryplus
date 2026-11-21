@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0a0a">
+<title>TRYPLUS | فروشگاه محصولات و خدمات دیجیتال</title>
+<meta name="description" content="تری‌پلاس؛ اشتراک، لایسنس، فایل دانلودی و خدمات دیجیتال با تحویل آنی خودکار.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+<style>
+:root{
+  --ink:#0a0a0a; --ink2:#161616; --ink3:#262626;
+  --paper:#ffffff; --paper2:#f4f4f2; --line:#e6e6e3;
+  --mute:#6b6b6b; --mute-d:#a3a3a3;
+  --volt:#0057ff;
+  --r:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Vazirmatn,Tahoma,sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;font-feature-settings:"ss01";overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+.en{font-family:ui-sans-serif,system-ui,"Segoe UI",Roboto,Arial,sans-serif;direction:ltr;unicode-bidi:isolate;letter-spacing:.02em}
+
+/* ---------- header ---------- */
+.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.top .row{display:flex;align-items:center;gap:12px;height:64px}
+.brand{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.brand img{height:34px;width:auto}
+.search{flex:1;display:flex;align-items:center;gap:8px;height:42px;padding:0 14px;border-radius:999px;background:var(--paper2);border:1px solid transparent;min-width:0;transition:.2s}
+.search:focus-within{border-color:var(--ink);background:#fff}
+.search input{flex:1;min-width:0;border:0;background:none;outline:none;font:inherit;font-size:13.5px;color:var(--ink)}
+.search input::placeholder{color:#8d8d8d}
+.search svg{flex:0 0 auto}
+.cart{position:relative;width:44px;height:44px;border-radius:14px;background:var(--ink);color:#fff;display:grid;place-items:center;flex:0 0 auto;transition:transform .2s}
+.cart.bump{animation:bump .5s}
+@keyframes bump{30%{transform:scale(1.15) rotate(-6deg)}60%{transform:scale(.95)}}
+.cart b{position:absolute;top:-5px;left:-5px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--volt);color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center;border:2px solid #fff}
+
+/* ---------- hero ---------- */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden;border-radius:0 0 34px 34px}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse at 70% 0%,#000 10%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 0%,#000 10%,transparent 70%)}
+.hero .wrap{position:relative;padding-top:34px;padding-bottom:40px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 14px;border:1px solid var(--ink3);border-radius:999px;font-size:12.5px;color:#d6d6d6;background:rgba(255,255,255,.03)}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--volt);box-shadow:0 0 0 4px rgba(0,87,255,.25);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(0,87,255,0)}}
+.hero h1{font-size:clamp(31px,8.6vw,58px);line-height:1.32;font-weight:900;margin:18px 0 14px;letter-spacing:-.5px}
+.hero h1 .out{color:transparent;-webkit-text-stroke:1.3px #fff}
+.hero h1 .plus{color:var(--volt)}
+.hero p.lead{color:#b9b9b9;font-size:15px;max-width:520px}
+.cta{display:flex;gap:10px;margin-top:22px}
+.cta .btn{flex:1 1 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 18px;white-space:nowrap;border-radius:16px;font-weight:800;font-size:14.5px;transition:.2s}
+.btn.w{background:#fff;color:var(--ink)}
+.btn.w:active{transform:scale(.97)}
+.btn.g{border:1px solid #3a3a3a;color:#fff}
+
+/* delivery ticket visual */
+.ticket{margin-top:30px;background:linear-gradient(160deg,#1b1b1b,#0f0f0f);border:1px solid #2a2a2a;border-radius:24px;padding:18px;position:relative}
+.t-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.t-prod{display:flex;align-items:center;gap:12px}
+.t-ico{width:46px;height:46px;border-radius:14px;background:#fff;color:var(--ink);display:grid;place-items:center;font-weight:900;font-size:13px}
+.t-prod strong{display:block;font-size:14.5px}
+.t-prod small{color:#8f8f8f;font-size:12px}
+.badge-ok{font-size:11.5px;font-weight:700;color:#fff;background:#202020;border:1px solid #333;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.badge-ok::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:#3ddc84;margin-left:6px;vertical-align:middle}
+.t-sep{border-top:1.5px dashed #333;margin:22px -18px 16px;position:relative}
+.t-sep::before,.t-sep::after{content:"";position:absolute;top:-12px;width:22px;height:22px;border-radius:50%;background:var(--ink)}
+.t-sep::before{right:-12px;border-left:1px solid #2a2a2a}.t-sep::after{left:-12px;border-right:1px solid #2a2a2a}
+.t-label{font-size:12px;color:#8f8f8f;margin-bottom:8px}
+.code{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#000;border:1px solid #2c2c2c;border-radius:14px;padding:12px 14px}
+.code span{font-family:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;direction:ltr;font-size:13px;letter-spacing:.6px;color:#fff;white-space:nowrap;overflow:hidden;min-width:0}
+.code span::after{content:"";display:inline-block;width:8px;height:16px;background:var(--volt);vertical-align:-2px;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.code button{font-size:12px;font-weight:700;color:#000;background:#fff;padding:6px 12px;border-radius:10px;flex:0 0 auto}
+.t-foot{display:flex;justify-content:space-between;margin-top:14px;font-size:12px;color:#8f8f8f}
+.t-foot b{color:#fff;font-weight:800}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px}
+.stats div{border:1px solid #242424;border-radius:16px;padding:12px 10px;text-align:center}
+.stats b{display:block;font-size:19px;font-weight:900}
+.stats small{font-size:11.5px;color:#9a9a9a}
+
+/* ---------- sections ---------- */
+section{padding:44px 0 6px}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:16px}
+.sh h2{font-size:23px;font-weight:900;line-height:1.4}
+.sh h2 em{font-style:normal;color:var(--mute);font-weight:500;font-size:13px;display:block}
+.sh a{font-size:13px;font-weight:700;border-bottom:1.5px solid var(--ink);white-space:nowrap}
+
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 18px 8px;margin:0 -18px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;display:flex;align-items:center;gap:8px;height:44px;padding:0 16px 0 18px;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:13.5px;font-weight:700;transition:.25s}
+.chip svg{opacity:.75}
+.chip small{font-weight:500;color:var(--mute);font-size:11.5px}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip.on small{color:#a8a8a8}
+.chip.on svg{opacity:1}
+
+/* category tiles */
+.cats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.cat{border-radius:20px;padding:16px;min-height:118px;display:flex;flex-direction:column;justify-content:space-between;background:var(--paper2);position:relative;overflow:hidden}
+.cat.d{background:var(--ink);color:#fff}
+.cat h3{font-size:15px;font-weight:800}
+.cat p{font-size:12px;color:var(--mute)}
+.cat.d p{color:#9a9a9a}
+.cat h3{padding-left:34px}
+.cat .n{position:absolute;left:14px;top:14px;font-size:26px;font-weight:900;opacity:.08;line-height:1}
+.cat.d .n{opacity:.14}
+
+/* products */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.card{border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,opacity .3s}
+.card.hide{display:none}
+.card:active{transform:scale(.985)}
+.thumb{aspect-ratio:1/1;padding-top:26px;position:relative;display:grid;place-items:center;background:var(--paper2);overflow:hidden}
+.thumb.dk{background:var(--ink)}
+.thumb .glyph{width:46%;aspect-ratio:1;border-radius:28%;display:grid;place-items:center;font-weight:900;font-size:24px;background:#fff;color:var(--ink);box-shadow:0 18px 40px -18px rgba(0,0,0,.35);transform:rotate(-6deg)}
+.thumb.dk .glyph{background:#1c1c1c;color:#fff;border:1px solid #333;box-shadow:none}
+.thumb .ring{position:absolute;width:120%;aspect-ratio:1;border-radius:50%;border:1px dashed rgba(0,0,0,.09)}
+.thumb.dk .ring{border-color:rgba(255,255,255,.1)}
+.inst{position:absolute;top:10px;right:10px;display:flex;align-items:center;gap:5px;font-size:10.5px;font-weight:800;padding:4px 9px;border-radius:999px;background:var(--ink);color:#fff}
+.thumb.dk .inst{background:#fff;color:var(--ink)}
+.inst svg{color:var(--volt)}
+.body{padding:12px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.body h3{font-size:13.5px;font-weight:800;line-height:1.6}
+.body .meta{font-size:11.5px;color:var(--mute)}
+.buy{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:auto;padding-top:8px}
+.price{font-weight:900;font-size:15px;line-height:1.2}
+.price small{display:block;font-size:10.5px;font-weight:500;color:var(--mute)}
+.price s{font-size:11px;color:#a3a3a3;font-weight:500;display:block}
+.add{width:40px;height:40px;border-radius:13px;background:var(--ink);color:#fff;display:grid;place-items:center;flex:0 0 auto;transition:.25s}
+.add.ok{background:var(--volt)}
+.note{font-size:11.5px;color:var(--mute);text-align:center;margin-top:14px}
+
+/* how it works */
+.how{background:var(--ink);color:#fff;border-radius:30px;padding:26px 18px;margin-top:6px;position:relative;overflow:hidden}
+.how h2{font-size:22px;font-weight:900;line-height:1.5}
+.how > p{color:#a5a5a5;font-size:13.5px;margin-top:6px}
+.steps{list-style:none;margin-top:22px;position:relative}
+.steps::before{content:"";position:absolute;right:21px;top:20px;bottom:20px;border-right:1.5px dashed #3a3a3a}
+.steps li{display:flex;gap:14px;padding:12px 0;position:relative}
+.steps .k{width:44px;height:44px;border-radius:14px;background:#fff;color:var(--ink);display:grid;place-items:center;flex:0 0 auto;font-weight:900}
+.steps li:nth-child(2) .k{background:var(--volt);color:#fff}
+.steps h3{font-size:15px;font-weight:800}
+.steps p{font-size:12.5px;color:#a5a5a5}
+.timer{margin-top:16px;display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid #2a2a2a;border-radius:18px;padding:14px 16px;background:#111}
+.timer span{font-size:12.5px;color:#a5a5a5}
+.timer b{font-size:22px;font-weight:900}
+.timer b small{font-size:12px;color:#a5a5a5;font-weight:500}
+
+/* trust */
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tr{border:1px solid var(--line);border-radius:20px;padding:16px 14px;display:flex;flex-direction:column;gap:10px}
+.tr .ic{width:40px;height:40px;border-radius:12px;background:var(--paper2);display:grid;place-items:center}
+.tr h3{font-size:14px;font-weight:800}
+.tr p{font-size:12px;color:var(--mute);line-height:1.7}
+
+/* faq-ish band */
+.band{margin-top:14px;border-radius:24px;background:var(--paper2);padding:20px 18px;display:flex;align-items:center;gap:14px}
+.band b{font-size:15px;font-weight:900;display:block}
+.band p{font-size:12.5px;color:var(--mute)}
+.band .btn{background:var(--ink);color:#fff;height:44px;padding:0 16px;font-size:13px;flex:0 0 auto;margin-right:auto}
+
+/* footer */
+footer{background:var(--ink);color:#fff;margin-top:44px;border-radius:34px 34px 0 0;padding:34px 0 26px}
+footer .lg{height:46px;width:auto}
+footer p{color:#9a9a9a;font-size:13px;margin-top:12px;max-width:460px}
+.fcols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+.fcols h4{font-size:13.5px;font-weight:800;margin-bottom:8px}
+.fcols a{display:block;font-size:12.5px;color:#a8a8a8;padding:3px 0}
+.seals{display:flex;gap:10px;margin-top:24px}
+.seal{width:74px;height:74px;border-radius:18px;border:1px dashed #3a3a3a;display:grid;place-items:center;text-align:center;font-size:10.5px;color:#8a8a8a;line-height:1.5}
+.copy{border-top:1px solid #222;margin-top:24px;padding-top:16px;font-size:11.5px;color:#7a7a7a;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+
+/* toast */
+.toast{visibility:hidden;position:fixed;left:50%;bottom:22px;transform:translate(-50%,140%);background:var(--ink);color:#fff;padding:12px 16px;border-radius:16px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:10px;z-index:80;transition:transform .35s cubic-bezier(.2,.9,.3,1.2);box-shadow:0 18px 40px -10px rgba(0,0,0,.4);white-space:nowrap}
+.toast.show{visibility:visible;transform:translate(-50%,0)}
+.toast i{width:22px;height:22px;border-radius:50%;background:var(--volt);display:grid;place-items:center}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+@media (min-width:760px){
+  .grid{grid-template-columns:repeat(3,1fr);gap:16px}
+  .trust{grid-template-columns:repeat(4,1fr)}
+  .cats{grid-template-columns:repeat(4,1fr)}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:60px;padding-bottom:64px}
+  .ticket{margin-top:0}
+  .how{padding:40px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .steps::before{display:none}
+  .steps li{flex-direction:column}
+  .fcols{grid-template-columns:repeat(3,1fr)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap row">
+    <a href="#" class="brand" aria-label="TRYPLUS"><img src="logo.png" alt="TRYPLUS" width="61" height="34"></a>
+    <label class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" placeholder="جستجو در محصولات…" aria-label="جستجو">
+    </label>
+    <button class="cart" id="cart" aria-label="سبد خرید">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14l-1.2 11.1a2 2 0 0 1-2 1.9H8.2a2 2 0 0 1-2-1.9L5 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+      <b id="count">۰</b>
+    </button>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="pill"><i></i> تحویل خودکار، ۲۴ ساعت شبانه‌روز</span>
+      <h1>دنیای دیجیتال،<br><span class="out">بدون انتظار</span><span class="plus">+</span></h1>
+      <p class="lead">اشتراک‌ها، لایسنس نرم‌افزار، فایل‌های دانلودی و خدمات دیجیتال؛ پرداخت کنید و چند ثانیه بعد، محصول در پنل و ایمیل شماست.</p>
+      <div class="cta">
+        <a href="#products" class="btn w">مشاهده محصولات
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M19 12H5m6-6-6 6 6 6"/></svg>
+        </a>
+        <a href="#how" class="btn g">تحویل آنی چطوره؟</a>
+      </div>
+      <div class="stats">
+        <div><b>۳۰″</b><small>میانگین تحویل</small></div>
+        <div><b>۲۴/۷</b><small>تحویل خودکار</small></div>
+        <div><b>۱۰۰٪</b><small>ضمانت اصالت</small></div>
+      </div>
+    </div>
+
+    <div class="ticket" aria-label="نمونه تحویل خودکار سفارش">
+      <div class="t-head">
+        <div class="t-prod">
+          <div class="t-ico en">W11</div>
+          <div><strong>لایسنس ویندوز ۱۱ پرو</strong><small>سفارش <span class="en">#TP-24817</span></small></div>
+        </div>
+        <span class="badge-ok">تحویل شد</span>
+      </div>
+      <div class="t-sep"></div>
+      <div class="t-label">کد لایسنس شما</div>
+      <div class="code"><span id="typed"></span><button type="button" id="copyBtn">کپی</button></div>
+      <div class="t-foot"><span>زمان تحویل: <b>۱۲ ثانیه</b></span><span>ارسال به پنل و ایمیل</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="products">
+  <div class="wrap">
+    <div class="sh"><h2><em>دسته‌بندی‌ها</em>دنبال چی هستید؟</h2></div>
+    <div class="chips" role="tablist" id="chips">
+      <button class="chip on" data-f="all">همه <small>۶</small></button>
+      <button class="chip" data-f="sub"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>اشتراک‌ها</button>
+      <button class="chip" data-f="lic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="15" r="4"/><path d="m11 12 8-8m-3 3 3 3"/></svg>لایسنس نرم‌افزار</button>
+      <button class="chip" data-f="file"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg>فایل دانلودی</button>
+      <button class="chip" data-f="srv"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5Z"/></svg>خدمات</button>
+    </div>
+
+    <div class="sh" style="margin-top:26px"><h2><em>پرفروش‌های این هفته</em>محصولات منتخب</h2><a href="#">همه محصولات</a></div>
+
+    <div class="grid" id="grid">
+      <article class="card reveal" data-c="sub">
+        <div class="thumb dk"><span class="ring"></span><span class="glyph en">GPT</span>
+          <span class="inst"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>تحویل آنی خودکار</span></div>
+        <div class="body"><h3>اشتراک ChatGPT Plus</h3><span class="meta">یک ماهه · روی ایمیل شما</span>
+          <div class="buy"><div class="price"><s>۲٬۸۹۰٬۰۰۰</s>۲٬۴۵۰٬۰۰۰<small>تومان</small></div><button class="add" aria-label="افزودن به سبد"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
+      </article>
+
+      <article class="card reveal" data-c="sub">
+        <div class="thumb"><span class="ring"></span><span class="glyph en">♫</span>
+          <span class="inst"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>تحویل آنی خودکار</span></div>
+        <div class="body"><h3>اکانت Spotify Premium</h3><span class="meta">یک ماهه · اختصاصی</span>
+          <div class="buy"><div class="price">۳۹۰٬۰۰۰<small>تومان</small></div><button class="add" aria-label="افزودن به سبد"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
+      </article>
+
+      <article class="card reveal" data-c="lic">
+        <div class="thumb"><span class="ring"></span><span class="glyph en">W11</span>
+          <span class="inst"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>تحویل آنی خودکار</span></div>
+        <div class="body"><h3>لایسنس ویندوز ۱۱ پرو</h3><span class="meta">دائمی · قابل فعال‌سازی آنلاین</span>
+          <div class="buy"><div class="price"><s>۸۹۰٬۰۰۰</s>۶۹۰٬۰۰۰<small>تومان</small></div><button class="add" aria-label="افزودن به سبد"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
+      </article>
+
+      <article class="card reveal" data-c="lic">
+        <div class="thumb dk"><span class="ring"></span><span class="glyph en">Cc</span>
+          <span class="inst"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>تحویل آنی خودکار</span></div>
+        <div class="body"><h3>Adobe Creative Cloud</h3><span class="meta">یک ماهه · همه اپلیکیشن‌ها</span>
+          <div class="buy"><div class="price">۱٬۸۹۰٬۰۰۰<small>تومان</small></div><button class="add" aria-label="افزودن به سبد"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
+      </article>
+
+      <article class="card reveal" data-c="sub">
+        <div class="thumb dk"><span class="ring"></span><span class="glyph en">Cv</span>
+          <span class="inst"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>تحویل آنی خودکار</span></div>
+        <div class="body"><h3>Canva Pro</h3><span class="meta">یک ساله · ارتقای اکانت شما</span>
+          <div class="buy"><div class="price"><s>۱٬۴۵۰٬۰۰۰</s>۱٬۱۹۰٬۰۰۰<small>تومان</small></div><button class="add" aria-label="افزودن به سبد"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
+      </article>
+
+      <article class="card reveal" data-c="file">
+        <div class="thumb"><span class="ring"></span><span class="glyph">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></svg></span>
+          <span class="inst"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>دانلود فوری</span></div>
+        <div class="body"><h3>پک ۱۲۰ قالب استوری لایه‌باز</h3><span class="meta">فایل دانلودی · PSD و Canva</span>
+          <div class="buy"><div class="price">۱۴۹٬۰۰۰<small>تومان</small></div><button class="add" aria-label="افزودن به سبد"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
+      </article>
+
+      <article class="card reveal hide" data-c="srv">
+        <div class="thumb dk"><span class="ring"></span><span class="glyph">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4 2.5-2.5Z"/></svg></span>
+          <span class="inst"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>شروع فوری</span></div>
+        <div class="body"><h3>نصب و فعال‌سازی ریموت</h3><span class="meta">خدمات · ویندوز و آفیس</span>
+          <div class="buy"><div class="price">۳۵۰٬۰۰۰<small>تومان</small></div><button class="add" aria-label="افزودن به سبد"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button></div></div>
+      </article>
+    </div>
+    <p class="note">* محصولات و قیمت‌ها نمونه هستند و فقط برای نمایش طراحی قرار گرفته‌اند.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cats">
+      <div class="cat d reveal"><span class="n en">01</span><h3>اشتراک‌ها</h3><p>هوش مصنوعی، موسیقی، طراحی</p></div>
+      <div class="cat reveal"><span class="n en">02</span><h3>لایسنس نرم‌افزار</h3><p>ویندوز، آفیس، آنتی‌ویروس</p></div>
+      <div class="cat reveal"><span class="n en">03</span><h3>فایل دانلودی</h3><p>قالب، فونت، آموزش</p></div>
+      <div class="cat d reveal"><span class="n en">04</span><h3>خدمات</h3><p>نصب، فعال‌سازی، ارتقا</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="how reveal">
+      <h2>تحویل آنی، یعنی واقعاً آنی</h2>
+      <p>بدون انتظار برای پاسخ ادمین؛ همه‌چیز خودکار و در چند ثانیه.</p>
+      <ol class="steps">
+        <li><span class="k">۱</span><div><h3>پرداخت امن</h3><p>از طریق درگاه بانکی معتبر و رمزنگاری‌شده.</p></div></li>
+        <li><span class="k">۲</span><div><h3>دریافت خودکار</h3><p>کد، اکانت یا فایل بلافاصله در پنل کاربری و ایمیل شما.</p></div></li>
+        <li><span class="k">۳</span><div><h3>پشتیبانی تیکتی</h3><p>هر سؤالی بود، از پنل تیکت بزنید؛ پیگیری تا نتیجه.</p></div></li>
+      </ol>
+      <div class="timer"><span>میانگین زمان از پرداخت تا تحویل</span><b>۳۰ <small>ثانیه</small></b></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sh"><h2><em>چرا تری‌پلاس؟</em>خیالتان راحت</h2></div>
+    <div class="trust">
+      <div class="tr reveal"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><h3>درگاه امن</h3><p>پرداخت مستقیم از درگاه بانکی شاپرک.</p></div>
+      <div class="tr reveal"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></span><h3>تحویل خودکار</h3><p>بدون معطلی، حتی ساعت ۳ بامداد.</p></div>
+      <div class="tr reveal"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v10H8l-4 4V6Z"/><path d="M8 11h8"/></svg></span><h3>پشتیبانی تیکتی</h3><p>پاسخ‌گویی منظم و قابل پیگیری.</p></div>
+      <div class="tr reveal"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>ضمانت</h3><p>ضمانت اصالت و سلامت تا پایان دوره.</p></div>
+    </div>
+    <div class="band reveal">
+      <div><b>اولین خرید؟</b><p>بعد از ثبت‌نام، سفارش‌ها و کدها همیشه در پنل شما می‌مانند.</p></div>
+      <a href="#" class="btn">ثبت‌نام</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo-light.png" alt="TRYPLUS" class="lg" width="83" height="46">
+    <p>تری‌پلاس؛ فروشگاه تخصصی محصولات و خدمات دیجیتال با تحویل آنی خودکار.</p>
+    <div class="fcols">
+      <div><h4>فروشگاه</h4><a href="#">اشتراک‌ها</a><a href="#">لایسنس نرم‌افزار</a><a href="#">فایل دانلودی</a><a href="#">خدمات</a></div>
+      <div><h4>راهنما</h4><a href="#">نحوه تحویل</a><a href="#">پیگیری سفارش</a><a href="#">قوانین و ضمانت</a><a href="#">ثبت تیکت</a></div>
+    </div>
+    <div class="seals"><div class="seal">جای نماد<br>اعتماد</div><div class="seal">جای نماد<br>ساماندهی</div></div>
+    <div class="copy"><span>© ۱۴۰۵ تری‌پلاس</span><span class="en">TRYPLUS</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><i><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg></i><span id="toastT">به سبد اضافه شد</span></div>
+
+<script>
+const fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+// typing license
+const key='VK7JG-NPHTM-C97JM-9MPGT',el=document.getElementById('typed');let i=0;
+function type(){ if(i<=key.length){el.textContent=key.slice(0,i++);setTimeout(type,i%6?70:220)} else setTimeout(()=>{i=0;type()},3200)}
+type();
+document.getElementById('copyBtn').onclick=e=>{e.target.textContent='کپی شد';setTimeout(()=>e.target.textContent='کپی',1500)};
+// chips filter
+const chips=[...document.querySelectorAll('.chip')],cards=[...document.querySelectorAll('.card')];
+chips.forEach(c=>c.onclick=()=>{chips.forEach(x=>x.classList.remove('on'));c.classList.add('on');const f=c.dataset.f;
+  cards.forEach(k=>{const show=f==='all'?k.dataset.c!=='srv':k.dataset.c===f;k.classList.toggle('hide',!show);if(show){k.classList.add('in')}})});
+// cart
+let count=0;const cnt=document.getElementById('count'),cart=document.getElementById('cart'),toast=document.getElementById('toast'),tt=document.getElementById('toastT');let tm;
+document.querySelectorAll('.add').forEach(b=>b.onclick=()=>{count++;cnt.textContent=fa(count);cart.classList.remove('bump');void cart.offsetWidth;cart.classList.add('bump');
+  b.classList.add('ok');b.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="m5 12 5 5 9-10"/></svg>';
+  tt.textContent='«'+b.closest('.card').querySelector('h3').textContent+'» به سبد اضافه شد';toast.classList.add('show');clearTimeout(tm);tm=setTimeout(()=>toast.classList.remove('show'),2200)});
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(r=>io.observe(r));
+</script>
+</body>
+</html>
