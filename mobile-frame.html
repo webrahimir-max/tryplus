@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TRYPLUS — live site in a mobile browser frame (webrahimir-max.github.io/tryplus)</title>
+<style>
+  :root { --frame-w: 460px; --screen-h: 800px; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 20px; padding: 28px 16px;
+    background: radial-gradient(1200px 700px at 50% 0%, #1b2330 0%, #0b0f16 60%, #070a10 100%);
+    font-family: "Segoe UI", Roboto, "Vazirmatn", Tahoma, Arial, sans-serif; color: #e8edf5;
+  }
+  .phone {
+    width: calc(var(--frame-w) + 28px); padding: 14px; border-radius: 46px;
+    background: linear-gradient(180deg, #2b3340 0%, #14181f 100%);
+    box-shadow: 0 30px 80px rgba(0,0,0,.65), inset 0 0 0 2px #3d4658;
+  }
+  .screen { width: var(--frame-w); border-radius: 34px; overflow: hidden; background: #fff; }
+  .chrome-top { background: #202124; color: #e8eaed; padding: 12px 14px 14px; }
+  .chrome-row { display: flex; align-items: center; gap: 12px; }
+  .dots { display: flex; gap: 4px; }
+  .dots i { width: 5px; height: 5px; border-radius: 50%; background: #9aa0a6; display: block; }
+  .url-pill {
+    flex: 1; display: flex; align-items: center; gap: 10px; background: #303134;
+    border-radius: 22px; padding: 11px 14px; font-size: 17px; letter-spacing: .2px;
+    color: #f1f3f4; white-space: nowrap; overflow: hidden;
+  }
+  .lock { width: 16px; height: 16px; flex: 0 0 16px; }
+  .url-pill .scheme { color: #9aa0a6; }
+  .url-pill .host { color: #f1f3f4; font-weight: 700; }
+  .url-pill .path { color: #dadce0; }
+  .avatar { width: 24px; height: 24px; border-radius: 50%; background: #8ab4f8; color: #202124;
+    font-size: 13px; font-weight: 700; display: grid; place-items: center; }
+  .refresh { color: #9aa0a6; font-size: 18px; }
+  iframe { display: block; width: var(--frame-w); height: var(--screen-h); border: 0; background: #fff; }
+  .chrome-bottom { background: #202124; color: #9aa0a6; display: flex; justify-content: space-around;
+    padding: 14px 0 18px; font-size: 20px; }
+  .caption { text-align: center; font-size: 16px; color: #aab6c8; max-width: 560px; line-height: 1.6; }
+  .caption b { color: #e8edf5; }
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="screen">
+      <div class="chrome-top">
+        <div class="chrome-row">
+          <span class="dots"><i></i><i></i><i></i><i></i></span>
+          <span class="url-pill">
+            <svg class="lock" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10V8a5 5 0 0 1 10 0v2" stroke="#8ab4f8" stroke-width="2"/><rect x="5" y="10" width="14" height="10" rx="2" fill="#8ab4f8"/></svg>
+            <span><span class="scheme">https://</span><span class="host">webrahimir-max.github.io</span><span class="path">/tryplus/</span></span>
+          </span>
+          <span class="refresh">⟳</span>
+          <span class="avatar">W</span>
+        </div>
+      </div>
+      <iframe src="https://webrahimir-max.github.io/tryplus/" title="TRYPLUS live site"></iframe>
+      <div class="chrome-bottom"><span>◀</span><span>◯</span><span>▫</span></div>
+    </div>
+  </div>
+  <p class="caption">Live URL shown in the address bar: <b>webrahimir-max.github.io/tryplus</b> — GitHub Pages site of <b>github.com/webrahimir-max/tryplus</b></p>
+</body>
+</html>
